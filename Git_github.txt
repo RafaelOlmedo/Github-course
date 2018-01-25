@@ -1,0 +1,32 @@
+Curso git e github
+
+-- Realiza configurações de usuário:
+	-- Nome:
+		-- git config --global user.name "Rafael Olmedo"
+	-- E-mail:
+		-- git config --global user.email "rafa-olmedo@hotmail.com"
+	-- Editor padrão: (sublime)
+		-- $ git config --global core.editor s
+
+
+Inicializa um repositório git:
+git init
+
+
+Status de versão dos arquivos no git:
+
+- Untracked (Não marcada):
+	- O arquivo acabou de ser adicionado no repositório, porém o git ainda não conhece o arquivo em nenhuma versão.
+- Unmodified (Não modificado):
+	- O arquivo já foi subido para o git, porém não foi modificado.
+- Modified:
+	- O arquivo está no git e foi modificado.
+- Staged:
+	- Arquivos que estão marcados que irão fazer parte da versão.
+
+
+Verificar o status do repositório git:
+git status
+
+Adiciona um arquivo para realizar commit
+git add <file> / git add . (adiciona todos os arquivos para o commit)
