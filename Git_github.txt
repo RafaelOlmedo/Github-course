@@ -30,3 +30,6 @@ git status
 
 Adiciona um arquivo para realizar commit
 git add <file> / git add . (adiciona todos os arquivos para o commit)
+
+Realizar commit:
+git commit -m "Adiciona o arquivo com as anotações referente ao curso do git"
