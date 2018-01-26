@@ -21,7 +21,7 @@ Status de versão dos arquivos no git:
 	- O arquivo já foi subido para o git, porém não foi modificado.
 - Modified:
 	- O arquivo está no git e foi modificado.
-- Staged:
+- Staged: (git add)
 	- Arquivos que estão marcados que irão fazer parte da versão.
 
 
@@ -33,3 +33,13 @@ git add <file> / git add . (adiciona todos os arquivos para o commit)
 
 Realizar commit:
 git commit -m "Adiciona o arquivo com as anotações referente ao curso do git"
+
+Logs:
+- Exibe informações referente aos commits realizados:
+git log
+git log --decorate (Exibe também informações de qual branch para qual branch)
+git log --author="Nome" (Exibe somente os commits de determinado usuário)
+git shortlog (Exibe o usuário, quantidade de commits e os comentários dos commits realizados)
+git shortlog -sn (Exibe somente o usuário e a quantidade de commits)
+git log --graph (Exibe as informações da master/branches a forma de um gráfico)
+git show <hash> (Exibe informações detalhadas de determinado commit)
