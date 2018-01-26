@@ -46,3 +46,33 @@ git show <hash> (Exibe informações detalhadas de determinado commit)
 
 Desfazer alterações antes de realizar o commit:
 git checkout NomeArquivo
+
+Apagar as alterações realizadas mesmo após ter realizado o 'git add .'
+git reset HEAD 
+	-	HEAD indica que quer voltar para a situação antes do add
+
+
+
+git reset --soft <hash do commit para o qual eu quero voltar>
+	--soft: Volta o commit, porém o arquivo já fica no staged, pronto para realizar o commit novamente (após o add);
+	-- mixed: Volta o commit também, porém o arquivo volta para modified (antes do add)
+	-- hard: Joga tudo fora.
+
+Vinculando um repositório local com um repositório remoto:
+git remote add origin https://github.com/RafaelOlmedo/Github-course.git
+
+Exibe os repositórios:
+git remote
+
+Envia todas as informações do repositório local para o repositório remoto:
+git push -u origin master
+	-u serve para criar um "link" e não precisar ficar digitando tudo nas próximas vezes;
+	- origin: pra onde vai;
+	- master: de onde vem
+
+
+
+
+
+GitHub de cara que anotou as coisas com o curso
+https://github.com/hemilioaraujo/cmdGit/blob/master/comandosGit.txt
