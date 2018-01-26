@@ -43,3 +43,6 @@ git shortlog (Exibe o usuário, quantidade de commits e os comentários dos comm
 git shortlog -sn (Exibe somente o usuário e a quantidade de commits)
 git log --graph (Exibe as informações da master/branches a forma de um gráfico)
 git show <hash> (Exibe informações detalhadas de determinado commit)
+
+Desfazer alterações antes de realizar o commit:
+git checkout NomeArquivo
