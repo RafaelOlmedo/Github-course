@@ -71,8 +71,111 @@ git push -u origin master
 	- master: de onde vem
 
 
+Clonar repositório remoto: (Checkout do SVN)
+git clone <url_repositorio> <nome_pasta>
+git clone git@github.com:RafaelOlmedo/Github-course.git git-clone
 
 
+Fork: Pega um projeto(repositório) que não é seu e faz uma cópia para você. Ele é utilizado quando se deseja realizar alterações em um projeto que não é seu.
+Você faz o Fork, realiza as alterações e faz um pullrequest
+
+------------------------------------------------------------------------------------------------------------------------
+
+Branch
+
+Criar branch
+
+	git checkout -b <nome_branch>
+	git checkout -b testing
+
+Exibir todas as branches
+
+	git branch
+
+Mover entre branches
+
+	git checkout <nome_branch>
+
+Apagar branch
+
+	git branch -D <nome_branch>
+
+
+Merge:
+Cria um novo commit para realizar a junção das alterações.
+	- Pros:
+		- Operação não destrutiva; (Ele não destroi nenhum commit. Ele cria um novo commit realizando a junção das coisas)
+	- Contras:
+		- Commit extra;
+		- Histórico poluído.
+
+Rebase:
+Pega o commit e coloca no final de "tudo", deixando de uma forma linear. Dessa forma tanto a branch como a master ficando apontando para esse novo estado, o estado de quem foi feito o rebase.
+	- Pros:
+		- Não possui commit extra;
+		- Histórico linear;
+	- Contra:
+		- Perde a ordem cronológica.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gitignore:
+
+Possui informações que não deseja que estejam no repositório ao realizar o commit:
+
+Cria o arquivo:
+	vi gitignore
+
+I: Permite alterar;
+
+No arquivo é possível indicar quais arquivos deseja que sejam ignorados, ou quais extensões devem ser ignoradas
+
+Após realizar as alterações, apertar ESC para sair do modo de alteração. :wq para salvar e sair do modo de edição.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Git stash:
+
+Utilizado quando você está realizando alterações no projeto, porém será necessário parar para realizar outra coisa. O git stash "salva" as alterações que vc realizou e deixa ela limpa, sem alterações vc que estava realizando. Dessa forma é possível criar um branch e realizar as alterações necessárias.
+Quando desejar voltar a realizar o primeiro processo, o git stash apply recupera suas alterações e permite que continue o desenvolvimento.
+
+	git stash
+	git stash apply
+	git stash list (exibe informações de todas as stashs)
+	git stash clear (limpa todas as stashs)
+
+--------------------------------------------------------------------------------------------------------------------
+No git é possível criar alias (atalhos) para os comandos para que não seja necessário o tempo todo digitar tudo.
+
+	git config --global alias.<alias_escolhido> <comando_alterado>
+	git config --global alias.s status
+--------------------------------------------------------------------------------------------------------------------
+
+Tags > Versionamento
+
+Criação da tag:
+	git tag -a 1.0.0 -m "Teste tag"
+
+Subir a tag para o github:
+	git push origin master --tags 
+
+--------------------------------------------------------------------------------------------------------------------
+
+Git Revert
+
+	git revert <hash_commit_reverter>
+
+Ele volta o projeto para antes do commit (hash informado), porém não mata o commit
+
+--------------------------------------------------------------------------------------------------------------------
+Apagar tags/branches remotas
+
+git push origin :<tag/nome_branch>
+
+Obs: Caso apague no local, ao subir para o remoto, ele não irá apagar a tag/branch.
+Fazendo da maneira acima ele apaga.
+--------------------------------------------------------------------------------------------------------------------
 
 GitHub de cara que anotou as coisas com o curso
 https://github.com/hemilioaraujo/cmdGit/blob/master/comandosGit.txt
